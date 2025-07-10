@@ -38,23 +38,23 @@ class AIProcessor:
         start_time = time.time()
         
         prompt = f"""
-        Rewrite the following article to make it unique and engaging while preserving the core information.
+        Write a blog post about the following topic with personal tone. Take the content provided and transform it into a personal blog post that feels authentic and engaging.
         
         Title: {title}
         Target Style: {style}
         
         Requirements:
-        - Completely rephrase all sentences
-        - Change sentence structure and length variety
-        - Use synonyms and alternative expressions
-        - Maintain factual accuracy
+        - Use a personal, conversational tone
+        - Write as if sharing personal insights or experiences
+        - Make it engaging and relatable
+        - Maintain all factual accuracy
         - Keep the same general length
-        - Make it sound natural and human-written
+        - Ensure it sounds naturally written by a human
         
-        Original Article:
+        Original Content:
         {content}
         
-        Rewritten Article:
+        Personal Blog Post:
         """
         
         try:
@@ -91,18 +91,17 @@ class AIProcessor:
         start_time = time.time()
         
         prompt = f"""
-        Take this AI-generated content and make it sound more human and natural. Focus on:
+        Rewrite this content like someone processing their thoughts in real time. Make it sound natural and human by:
         
-        1. Adding subtle imperfections that humans naturally make
-        2. Varying sentence rhythm and flow
-        3. Including more conversational elements
-        4. Adding transitional phrases that sound natural
-        5. Incorporating slight stylistic inconsistencies that humans have
-        6. Making the tone more engaging and personal
+        1. Adding natural thought processes and transitions
+        2. Including slight hesitations and considerations ("I think...", "It seems like...", "Maybe...")
+        3. Using more conversational language and flow
+        4. Adding personal reflections and observations
+        5. Making it feel like someone working through ideas as they write
+        6. Including natural human imperfections in reasoning and expression
         
-        Do not change the core facts or main message, just make it sound more human-written.
+        Transform this content to sound like authentic human thinking:
         
-        Content to humanize:
         {content}
         """
         
@@ -142,16 +141,17 @@ class AIProcessor:
         start_time = time.time()
         
         prompt = f"""
-        Please perform a final revision of this article to:
+        Find any phrasing that sounds robotic or predictable in this content and suggest changes. Focus on:
         
-        1. Ensure smooth flow and readability
-        2. Fix any grammatical issues while maintaining natural human writing style
-        3. Enhance clarity and engagement
-        4. Ensure the content feels authentic and original
-        5. Add final polish while keeping it conversational
-        6. Maintain all factual information
+        1. Identifying overly formal or robotic language patterns
+        2. Spotting predictable AI-generated phrases and structures
+        3. Finding repetitive or mechanical sentence patterns
+        4. Detecting unnatural transitions or conclusions
+        5. Locating overly perfect grammar or structure
+        6. Suggesting more natural, human-like alternatives
         
-        Article for revision:
+        Review this content and make it sound more authentic and less AI-generated:
+        
         {content}
         """
         
